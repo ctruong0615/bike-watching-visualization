@@ -1,0 +1,41 @@
+/* map.css */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#map {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* SVG overlay on map */
+#map svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Circles need pointer-events for tooltips */
+#map svg circle {
+    pointer-events: auto;
+    transition: r 0.2s ease;
+}
+
+/* Mapbox attribution styling */
+.mapboxgl-ctrl-bottom-right {
+    z-index: 2;
+}

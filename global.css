@@ -1,0 +1,132 @@
+:root {
+    --color-arrivals: #1f78b4;
+    --color-departures: #e31a1c;
+    --color-balanced: #35682D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 100%/1.5 system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-flow: column;
+    max-width: 80em;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1em;
+    background: #f5f5f5;
+}
+
+header {
+    display: flex;
+    gap: 1em;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+header p {
+    color: #666;
+    flex-grow: 1;
+}
+
+.time-filter {
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75em;
+    background: white;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.time-display {
+    min-width: 100px;
+}
+
+.time-display time {
+    display: block;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.time-display em {
+    display: block;
+    color: #999;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+main {
+    flex: 1;
+    min-height: 500px;
+}
+
+/* Legend - Horizontal layout with LEGEND: label - CENTERED */
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 1rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.legend .legend-label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 0.25rem;
+}
+
+.legend .legend-items {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.legend-item .swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.legend-item .swatch-departures {
+    background: var(--color-departures);
+}
+
+.legend-item .swatch-balanced {
+    background: var(--color-balanced);
+}
+
+.legend-item .swatch-arrivals {
+    background: var(--color-arrivals);
+}
+
+.legend-item span:last-child {
+    color: #444;
+}
