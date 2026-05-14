@@ -1,7 +1,5 @@
 /* map.css */
-
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -16,6 +14,8 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    margin: 0 auto;
+    margin-left: 10%;  /* ADD THIS - shifts map to the right */
 }
 
 /* SVG overlay on map */
@@ -29,7 +29,7 @@ body {
     pointer-events: none;
 }
 
-/* Circles need pointer-events for tooltips */
+/ Circles need pointer-events for tooltips /
 #map svg circle {
     pointer-events: auto;
     transition: r 0.2s ease;

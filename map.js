@@ -55,20 +55,18 @@ function getCoords(station) {
 // Helper: Get actual hex color based on departure ratio
 function getStationColorHex(station) {
     if (station.totalTraffic === 0) {
-        return '#35682D'; // Balanced green
+        return '#2f83e3'; // Balanced green
     }
     
     const ratio = station.departures / station.totalTraffic;
     
-    // ratio < 0.33 -> more arrivals (blue)
-    // ratio between 0.33 and 0.66 -> balanced (green)
-    // ratio > 0.66 -> more departures (red)
+  
     if (ratio < 0.33) {
-        return '#1f78b4';  // Blue - More Arrivals
+        return '#eece18'; 
     } else if (ratio > 0.66) {
-        return '#e31a1c';  // Red - More Departures
+        return '#f60eb8';  
     } else {
-        return '#35682D';  // Green - Balanced
+        return '#2f83e3'; 
     }
 }
 
